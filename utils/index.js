@@ -1,8 +1,9 @@
 
-let text = "No-one ever knew that a very angry monster lived underneath the old, iron bridge."
+let text = "No-one, ever knew that a very angry monster lived underneath the old, iron bridge."
 let words = text.toLowerCase().split(" ");
 let message = "I Love Man U"
 let noSpaces = message.replace(/ /g, "").toLowerCase();
+let noPunc = noSpaces.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
 
 
 // const message = () => {
@@ -24,8 +25,8 @@ findFirst()
 const findLast = () => {
     for (i = 0; i < words.length; i++) {
         let lastLetter = words[i];
-        let lastClean = lastLetter.replace(".", "")
-        let clean = lastClean.replace(",", "")
+        let lastClean = lastLetter.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+        let clean = lastClean.replace(/\s{2,}/g, "")
         let n = clean.length;
         let lastList = lastLetter.charAt(n - 1);
         console.log(lastList);
@@ -45,7 +46,7 @@ findLast()
 // text();
 
 
-console.log(noSpaces)
+console.log(noPunc)
 console.log(process.argv)
 
 
