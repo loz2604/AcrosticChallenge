@@ -40,28 +40,14 @@ const check = () => {
     if (fLetters.charAt(i) == noPunc.charAt(j)) {
         console.log(true)
         return true
-
+    } else if (lLetters.charAt(i) == noPunc.charAt(j)) {
+        console.log(true)
+        return true
     } else {
         console.log(false)
         return false;
     }
 }
-
-
-//     {
-//         isFound = fLetters.indexOf(noPunc)
-
-//     }
-// }
-// if (isFound) {
-//     console.log("yes")
-// } else if (isFound2) {
-//     console.log("yes")
-// } else {
-//     console, log("NO")
-// }
-
-
 
 check();
 console.log(fLetters);
@@ -73,13 +59,5 @@ console.log(noPunc)
 // Need to be able to input the following in the terminal
 
 // Node index.js --message "I Love Man U" --text "No-one ever knew that a very angry monster lived underneath the old, iron bridge. "
-//  Give the answer true or false
-
-// console.log(firstLetter)
-// const main1 = () => process.argv.includes(message) ? "Found" : "Not Found";
-// console.log(main1())
-
-// console.log(fLetters.includes(noPunc)); // true
-// str.includes("Node.js"); // false
 
 module.exports = { text, message };
