@@ -18,8 +18,6 @@ const findFirst = () => {
 };
 findFirst()
 
-console.log(fLetters);
-console.log(fLetters.includes(noPunc));
 
 const findLast = () => {
     for (i = 0; i < words.length; i++) {
@@ -30,13 +28,46 @@ const findLast = () => {
         let lastList = lastLetter.charAt(n - 1);
         // return lastList;
         lLetters = lLetters + lastList;
-
     }
 };
 findLast()
+
+const check = () => {
+    for (i = 0; i < fLetters.length; i++) {
+        for (j = 0; j < fLetters.length; j++) {
+        }
+    }
+    if (fLetters.charAt(i) == noPunc.charAt(j)) {
+        console.log(true)
+        return true
+
+    } else {
+        console.log(false)
+        return false;
+    }
+}
+
+
+//     {
+//         isFound = fLetters.indexOf(noPunc)
+
+//     }
+// }
+// if (isFound) {
+//     console.log("yes")
+// } else if (isFound2) {
+//     console.log("yes")
+// } else {
+//     console, log("NO")
+// }
+
+
+
+check();
+console.log(fLetters);
 console.log(lLetters);
 console.log(noPunc)
-console.log(process.argv)
+// console.log(process.argv)
 
 
 // Need to be able to input the following in the terminal
@@ -48,5 +79,7 @@ console.log(process.argv)
 // const main1 = () => process.argv.includes(message) ? "Found" : "Not Found";
 // console.log(main1())
 
+// console.log(fLetters.includes(noPunc)); // true
+// str.includes("Node.js"); // false
 
 module.exports = { text, message };
